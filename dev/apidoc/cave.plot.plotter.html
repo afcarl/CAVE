@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cave.plot.plotter module &mdash; CAVE 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="CAVE 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="cave.plot package" href="cave.plot.html"/>
+        <link rel="next" title="cave.plot.scatter module" href="cave.plot.scatter.html"/>
+        <link rel="prev" title="cave.plot.parallel_coordinates module" href="cave.plot.parallel_coordinates.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CAVE
+          
+
+          
+            
+            <img src="../_static/cave.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">F.A.Q.</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cave.analyzer.html">cave.analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cave.cave_cli.html">cave.cave_cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cave.cavefacade.html">cave.cavefacade module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cave.plot.html">cave.plot package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.algorithm_footprint.html">cave.plot.algorithm_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.configurator_footprint.html">cave.plot.configurator_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.parallel_coordinates.html">cave.plot.parallel_coordinates module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cave.plot.plotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.scatter.html">cave.plot.scatter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.html.html">cave.html package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.html.html_builder.html">cave.html.html_builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.reader.html">cave.reader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.base_reader.html">cave.reader.base_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.configurator_run.html">cave.reader.configurator_run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.csv2rh.html">cave.reader.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.csv_reader.html">cave.reader.csv_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.smac2_reader.html">cave.reader.smac2_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.smac3_reader.html">cave.reader.smac3_reader module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.utils.html">cave.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.convert_for_epm.html">cave.utils.convert_for_epm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.csv2rh.html">cave.utils.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.helpers.html">cave.utils.helpers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.io.html">cave.utils.io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.statistical_tests.html">cave.utils.statistical_tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.timing.html">cave.utils.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.tooltips.html">cave.utils.tooltips module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CAVE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+          <li><a href="cave.plot.html">cave.plot package</a> &raquo;</li>
+        
+      <li>cave.plot.plotter module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/cave.plot.plotter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cave.plot.plotter">
+<span id="cave-plot-plotter-module"></span><h1>cave.plot.plotter module<a class="headerlink" href="#module-cave.plot.plotter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cave.plot.plotter.Plotter">
+<em class="property">class </em><code class="descclassname">cave.plot.plotter.</code><code class="descname">Plotter</code><span class="sig-paren">(</span><em>scenario</em>, <em>output_dir</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is used to outsource some plotting routines and some of the parts
+of analysis that require lots of plot-related code (such as conf_viz or
+parallel_coordinates). It should be invoked via the Analyzer-class. More
+complicated or generalized plotting routines are outsourced and imported, so
+they can be easily adapted into other projects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scenario</strong> (<em>Scenario</em>) – scenario to take cutoff, train- test, etc from</li>
+<li><strong>train_test</strong> (<em>bool</em>) – whether to make a distinction between train and test</li>
+<li><strong>conf2_runs</strong> (<em>conf1_runs</em><em>,</em>) – lists with smac.runhistory.runhistory.RunValue, from which to read
+cost or time</li>
+<li><strong>output_dir</strong> (<em>str</em>) – output-directory</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cave.plot.plotter.Plotter.plot_cdf_compare">
+<code class="descname">plot_cdf_compare</code><span class="sig-paren">(</span><em>default</em>, <em>incumbent</em>, <em>runhistory</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter.plot_cdf_compare"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter.plot_cdf_compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the cumulated distribution functions for given configurations,
+plots will share y-axis and if desired x-axis.
+Saves plot to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>output</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – filename, default: CDF_compare.png</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.plot.plotter.Plotter.plot_cost_over_time">
+<code class="descname">plot_cost_over_time</code><span class="sig-paren">(</span><em>rh: smac.runhistory.runhistory.RunHistory, runs: List[cave.reader.configurator_run.ConfiguratorRun], output_fn: str = 'performance_over_time.png', validator: Union[NoneType, smac.utils.validate.Validator] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter.plot_cost_over_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter.plot_cost_over_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot performance over time, using all trajectory entries
+with max_time = wallclock_limit or (if inf) the highest
+recorded time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rh</strong> (<em>RunHistory</em>) – runhistory to use</li>
+<li><strong>runs</strong> (<em>List</em><em>[</em><em>SMACrun</em><em>]</em>) – list of configurator-runs</li>
+<li><strong>output_fn</strong> (<em>str</em>) – path to output-png</li>
+<li><strong>validator</strong> (<em>TODO description</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.plot.plotter.Plotter.plot_parallel_coordinates">
+<code class="descname">plot_parallel_coordinates</code><span class="sig-paren">(</span><em>rh</em>, <em>output</em>, <em>params</em>, <em>n_configs</em>, <em>validator</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter.plot_parallel_coordinates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter.plot_parallel_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot parallel coordinates (visualize higher dimensions), here used
+to visualize pcs. This function prepares the data from a SMAC-related
+format (using runhistories and parameters) to a more general format
+(using a dataframe). The resulting dataframe is passed to the
+parallel_coordinates-routine.</p>
+<p>NOTE: the given runhistory should contain only optimization and no
+validation to analyze the explored parameter-space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rh</strong> (<em>RunHistory</em>) – rundata to take configs from</li>
+<li><strong>output</strong> (<em>str</em>) – where to save plot</li>
+<li><strong>params</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – parameters to be plotted</li>
+<li><strong>n_configs</strong> (<em>int</em>) – max # configs</li>
+<li><strong>validator</strong> (<em>Validator</em>) – to calculate alpha values</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>output</strong> – path to plot</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.plot.plotter.Plotter.plot_scatter">
+<code class="descname">plot_scatter</code><span class="sig-paren">(</span><em>default</em>, <em>incumbent</em>, <em>runhistory</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter.plot_scatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter.plot_scatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a scatterplot of the two configurations on the given set of
+instances.
+Saves plot to file.</p>
+<dl class="docutils">
+<dt>output_fn_base: string</dt>
+<dd>base-path to save plot to</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.plot.plotter.Plotter.visualize_configs">
+<code class="descname">visualize_configs</code><span class="sig-paren">(</span><em>scen</em>, <em>runhistories</em>, <em>incumbents=None</em>, <em>max_confs_plot=1000</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/plot/plotter.html#Plotter.visualize_configs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.plot.plotter.Plotter.visualize_configs" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scen</strong> (<em>Scenario</em>) – scenario</li>
+<li><strong>rhs</strong> (<em>List</em><em>[</em><em>RunHistory</em><em>]</em>) – (unvalidated!) runhistories</li>
+<li><strong>inc</strong> (<em>List</em><em>[</em><em>Configuration</em><em>]</em>) – incumbents of all runs</li>
+<li><strong>max_confs_plot</strong> (<em>int</em>) – # configurations to be plotted</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cave.plot.scatter.html" class="btn btn-neutral float-right" title="cave.plot.scatter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cave.plot.parallel_coordinates.html" class="btn btn-neutral" title="cave.plot.parallel_coordinates module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018, Marius Lindauer, Joshua Marben, Andre Biedenkapp.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

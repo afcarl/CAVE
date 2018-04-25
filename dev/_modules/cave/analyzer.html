@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cave.analyzer &mdash; CAVE 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="CAVE 1.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> CAVE
+          
+
+          
+            
+            <img src="../../_static/cave.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">F.A.Q.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.analyzer.html">cave.analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.cave_cli.html">cave.cave_cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.cavefacade.html">cave.cavefacade module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.plot.html">cave.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.plot.algorithm_footprint.html">cave.plot.algorithm_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.plot.configurator_footprint.html">cave.plot.configurator_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.plot.parallel_coordinates.html">cave.plot.parallel_coordinates module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.plot.plotter.html">cave.plot.plotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.plot.scatter.html">cave.plot.scatter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.html.html">cave.html package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.html.html_builder.html">cave.html.html_builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.reader.html">cave.reader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.base_reader.html">cave.reader.base_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.configurator_run.html">cave.reader.configurator_run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.csv2rh.html">cave.reader.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.csv_reader.html">cave.reader.csv_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.smac2_reader.html">cave.reader.smac2_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.reader.smac3_reader.html">cave.reader.smac3_reader module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../apidoc/cave.utils.html">cave.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.convert_for_epm.html">cave.utils.convert_for_epm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.csv2rh.html">cave.utils.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.helpers.html">cave.utils.helpers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.io.html">cave.utils.io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.statistical_tests.html">cave.utils.statistical_tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.timing.html">cave.utils.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apidoc/cave.utils.tooltips.html">cave.utils.tooltips module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CAVE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>cave.analyzer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for cave.analyzer</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">DataFrame</span>
+
+<span class="kn">from</span> <span class="nn">smac.configspace</span> <span class="k">import</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">smac.epm.rf_with_instances</span> <span class="k">import</span> <span class="n">RandomForestWithInstances</span>
+<span class="kn">from</span> <span class="nn">smac.optimizer.objective</span> <span class="k">import</span> <span class="n">average_cost</span>
+<span class="kn">from</span> <span class="nn">smac.runhistory.runhistory</span> <span class="k">import</span> <span class="n">RunKey</span><span class="p">,</span> <span class="n">RunValue</span><span class="p">,</span> <span class="n">RunHistory</span>
+<span class="kn">from</span> <span class="nn">smac.runhistory.runhistory2epm</span> <span class="k">import</span> <span class="n">RunHistory2EPM4Cost</span>
+<span class="kn">from</span> <span class="nn">smac.scenario.scenario</span> <span class="k">import</span> <span class="n">Scenario</span>
+<span class="kn">from</span> <span class="nn">smac.utils.io.traj_logging</span> <span class="k">import</span> <span class="n">TrajLogger</span>
+<span class="kn">from</span> <span class="nn">smac.utils.validate</span> <span class="k">import</span> <span class="n">Validator</span>
+
+<span class="kn">from</span> <span class="nn">pimp.importance.importance</span> <span class="k">import</span> <span class="n">Importance</span>
+
+<span class="kn">from</span> <span class="nn">cave.feature_analysis.feature_analysis</span> <span class="k">import</span> <span class="n">FeatureAnalysis</span>
+<span class="kn">from</span> <span class="nn">cave.feature_analysis.feature_imp</span> <span class="k">import</span> <span class="n">FeatureForwardSelector</span>
+<span class="kn">from</span> <span class="nn">cave.html.html_builder</span> <span class="k">import</span> <span class="n">HTMLBuilder</span>
+<span class="kn">from</span> <span class="nn">cave.plot.plotter</span> <span class="k">import</span> <span class="n">Plotter</span>
+<span class="kn">from</span> <span class="nn">cave.plot.algorithm_footprint</span> <span class="k">import</span> <span class="n">AlgorithmFootprint</span>
+<span class="kn">from</span> <span class="nn">cave.reader.configurator_run</span> <span class="k">import</span> <span class="n">ConfiguratorRun</span>
+<span class="kn">from</span> <span class="nn">cave.utils.helpers</span> <span class="k">import</span> <span class="n">get_cost_dict_for_config</span><span class="p">,</span> <span class="n">get_timeout</span>
+<span class="kn">from</span> <span class="nn">cave.utils.timing</span> <span class="k">import</span> <span class="n">timing</span>
+<span class="kn">from</span> <span class="nn">cave.utils.statistical_tests</span> <span class="k">import</span> <span class="n">paired_permutation</span><span class="p">,</span> <span class="n">paired_t_student</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Joshua Marben&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright 2017, ML4AAD&quot;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;3-clause BSD&quot;</span>
+<span class="n">__maintainer__</span> <span class="o">=</span> <span class="s2">&quot;Joshua Marben&quot;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;joshua.marben@neptun.uni-freiburg.de&quot;</span>
+
+<div class="viewcode-block" id="Analyzer"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer">[docs]</a><span class="k">class</span> <span class="nc">Analyzer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class serves as an interface to all the individual analyzing and</span>
+<span class="sd">    plotting components. The plotter object is responsible for the actual</span>
+<span class="sd">    plotting of things, but should not be invoked via the facade (which is</span>
+<span class="sd">    constructed for cmdline-usage).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">original_rh</span><span class="p">,</span>
+                 <span class="n">validated_rh</span><span class="p">,</span>
+                 <span class="n">best_run</span><span class="p">,</span>
+                 <span class="n">train_test</span><span class="p">,</span>
+                 <span class="n">scenario</span><span class="p">,</span>
+                 <span class="n">validator</span><span class="p">,</span>
+                 <span class="n">pimp</span><span class="p">,</span>
+                 <span class="n">model</span><span class="p">,</span>
+                 <span class="n">output</span><span class="p">,</span>
+                 <span class="n">max_pimp_samples</span><span class="p">,</span>
+                 <span class="n">fanova_pairwise</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">rng</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        original_rh: RunHistory</span>
+<span class="sd">            runhistory containing all runs that have actually been run</span>
+<span class="sd">        validated_rh: RunHistory</span>
+<span class="sd">            runhistory containing all runs from original_rh + estimates for</span>
+<span class="sd">            default and all incumbents for all instances</span>
+<span class="sd">        default, incumbent: Configuration</span>
+<span class="sd">            default and overall incumbent</span>
+<span class="sd">        train_test: bool</span>
+<span class="sd">            whether is distinction is made (in cdf and scatter)</span>
+<span class="sd">        scenario: Scenario</span>
+<span class="sd">            the scenario object</span>
+<span class="sd">        validator: Validator</span>
+<span class="sd">            validator object (to estimate using EPM)</span>
+<span class="sd">        pimp: Importance</span>
+<span class="sd">            parameter importance object with trained model</span>
+<span class="sd">        model: RandomForest</span>
+<span class="sd">            random forest trained on original (combinated) runhistory</span>
+<span class="sd">        output: string</span>
+<span class="sd">            output-directory</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;cave.analyzer&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rng</span> <span class="o">=</span> <span class="n">rng</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rng</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No randomstate passed. Generate deterministic &quot;</span>
+                             <span class="s2">&quot;random state.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+        <span class="c1"># Important objects for analysis</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span> <span class="o">=</span> <span class="n">original_rh</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span> <span class="o">=</span> <span class="n">validated_rh</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_run</span> <span class="o">=</span> <span class="n">best_run</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_test</span> <span class="o">=</span> <span class="n">train_test</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span> <span class="o">=</span> <span class="n">scenario</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_default_configuration</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_run</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">incumbent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validator</span> <span class="o">=</span> <span class="n">validator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span> <span class="o">=</span> <span class="n">pimp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># feat_analysis object for reuse</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">output</span>
+
+        <span class="c1"># Save parameter importances evaluated as dictionaries</span>
+        <span class="c1"># {method : {parameter : importance}}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_importance</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Used to store dictionary for feat_imp</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span> <span class="o">=</span> <span class="n">Plotter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_pimp_samples</span> <span class="o">=</span> <span class="n">max_pimp_samples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fanova_pairwise</span> <span class="o">=</span> <span class="n">fanova_pairwise</span>
+
+<div class="viewcode-block" id="Analyzer.get_timeouts"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.get_timeouts">[docs]</a>    <span class="k">def</span> <span class="nf">get_timeouts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get number of timeouts in config per runs in total (not per</span>
+<span class="sd">        instance)</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        config: Configuration</span>
+<span class="sd">            configuration from which to calculate the timeouts</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        timeouts: tuple(int, int)</span>
+<span class="sd">            tuple (timeouts, total runs)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cutoff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span>
+        <span class="n">timeouts</span> <span class="o">=</span> <span class="n">get_timeout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_test</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cutoff</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">((</span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="s2">&quot;A&quot;</span><span class="p">),(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="s2">&quot;A&quot;</span><span class="p">))</span>
+            <span class="n">train_timeout</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">timeouts</span> <span class="k">if</span> <span class="p">(</span><span class="n">timeouts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span>
+                                  <span class="ow">and</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">train_insts</span><span class="p">)])</span>
+            <span class="n">test_timeout</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">timeouts</span> <span class="k">if</span> <span class="p">(</span><span class="n">timeouts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span>
+                                  <span class="ow">and</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span><span class="p">)])</span>
+            <span class="k">return</span> <span class="p">((</span><span class="n">train_timeout</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">train_insts</span><span class="p">)),</span>
+                    <span class="p">(</span><span class="n">test_timeout</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cutoff</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+            <span class="n">timeout</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">timeouts</span> <span class="k">if</span> <span class="n">timeouts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">])</span>
+            <span class="n">no_timeout</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">timeouts</span> <span class="k">if</span> <span class="n">timeouts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">])</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">timeout</span><span class="p">,</span> <span class="n">no_timeout</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Analyzer.get_parX"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.get_parX">[docs]</a>    <span class="k">def</span> <span class="nf">get_parX</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">par</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate parX-values of default and incumbent configs.</span>
+<span class="sd">        First determine PAR-timeouts for each run on each instances,</span>
+<span class="sd">        Second average over train/test if available, else just average.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        config: Configuration</span>
+<span class="sd">            config to be calculated</span>
+<span class="sd">        par: int</span>
+<span class="sd">            par-factor to use</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        (train, test) OR average -- tuple&lt;float, float&gt; OR float</span>
+<span class="sd">            PAR10 values for train- and test-instances, if available as tuple</span>
+<span class="sd">            else the general average</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">runs</span> <span class="o">=</span> <span class="n">get_cost_dict_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+        <span class="c1"># Penalize</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span><span class="p">:</span>
+            <span class="n">runs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">runs</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">if</span> <span class="n">runs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span>
+                        <span class="k">else</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span><span class="o">*</span><span class="n">par</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">runs</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">runs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">runs</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">runs</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Calculating penalized average runtime without &quot;</span>
+                             <span class="s2">&quot;cutoff...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Average</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_test</span><span class="p">:</span>
+            <span class="n">train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">runs</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">train_insts</span><span class="p">])</span>
+            <span class="n">test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">runs</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span><span class="p">])</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">runs</span><span class="p">])</span></div>
+
+    <span class="k">def</span> <span class="nf">_permutation_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">,</span> <span class="n">num_permutations</span><span class="p">):</span>
+        <span class="n">def_cost</span><span class="p">,</span> <span class="n">inc_cost</span> <span class="o">=</span> <span class="n">get_cost_dict_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">default</span><span class="p">),</span> <span class="n">get_cost_dict_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">)</span>
+        <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[(</span><span class="n">def_cost</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">inc_cost</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">def_cost</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">paired_permutation</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rng</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;p-value for def/inc-difference: </span><span class="si">%f</span><span class="s2"> (permutation test)&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">p</span>
+
+    <span class="k">def</span> <span class="nf">_paired_t_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">,</span> <span class="n">num_permutations</span><span class="p">):</span>
+        <span class="n">def_cost</span><span class="p">,</span> <span class="n">inc_cost</span> <span class="o">=</span> <span class="n">get_cost_dict_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">default</span><span class="p">),</span> <span class="n">get_cost_dict_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">)</span>
+        <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[(</span><span class="n">def_cost</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">inc_cost</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">def_cost</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">paired_t_student</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;p-value for def/inc-difference: </span><span class="si">%f</span><span class="s2"> (paired t-test)&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">p</span>
+
+<span class="c1">####################################### TABLES #######################################</span>
+
+<div class="viewcode-block" id="Analyzer.create_overview_table"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.create_overview_table">[docs]</a>    <span class="k">def</span> <span class="nf">create_overview_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">best_folder</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Create overview-table.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        best_folder: str</span>
+<span class="sd">            path to folder/run with best incumbent</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        table: str</span>
+<span class="sd">            overview table in HTML</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">all_confs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_run</span><span class="o">.</span><span class="n">original_runhistory</span><span class="o">.</span><span class="n">get_all_configs</span><span class="p">()</span>
+        <span class="n">num_configs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_confs</span><span class="p">)</span>
+        <span class="n">ta_runtime</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span><span class="o">.</span><span class="n">get_cost</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span> <span class="k">for</span> <span class="n">conf</span> <span class="ow">in</span> <span class="n">all_confs</span><span class="p">])</span>
+        <span class="n">ta_evals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span><span class="o">.</span><span class="n">get_runs_for_config</span><span class="p">(</span><span class="n">conf</span><span class="p">))</span> <span class="k">for</span> <span class="n">conf</span> <span class="ow">in</span> <span class="n">all_confs</span><span class="p">]</span>
+        <span class="n">ta_evals_d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span><span class="o">.</span><span class="n">get_runs_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">))</span>
+        <span class="n">ta_evals_i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span><span class="o">.</span><span class="n">get_runs_for_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">))</span>
+        <span class="n">min_ta_evals</span><span class="p">,</span> <span class="n">max_ta_evals</span><span class="p">,</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">ta_evals</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">ta_evals</span><span class="p">)</span>
+        <span class="n">mean_ta_evals</span><span class="p">,</span> <span class="n">ta_evals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ta_evals</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ta_evals</span><span class="p">)</span>
+        <span class="n">num_feats</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">n_features</span>
+        <span class="n">dup_feats</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">feature_array</span><span class="p">)</span>  <span class="c1"># only contains train instances</span>
+        <span class="n">num_dup_feats</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dup_feats</span><span class="p">[</span><span class="n">dup_feats</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()])</span>
+        <span class="n">p_value_perm</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_permutation_test</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+        <span class="n">p_value_t</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paired_t_test</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+        <span class="n">overview</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;Run with best incumbent&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">best_folder</span><span class="p">)),</span>
+                                <span class="c1"># Constants for scenario</span>
+                                <span class="p">(</span><span class="s1">&#39;# Train instances&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">train_insts</span><span class="p">)),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Test instances&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span><span class="p">)),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Parameters&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_hyperparameters</span><span class="p">())),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Features&#39;</span><span class="p">,</span> <span class="n">num_feats</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Duplicate Feature vectors&#39;</span><span class="p">,</span> <span class="n">num_dup_feats</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;empty1&#39;</span><span class="p">,</span> <span class="s1">&#39;empty1&#39;</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Evaluated Configurations&#39;</span><span class="p">,</span> <span class="n">num_configs</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Default evaluations&#39;</span><span class="p">,</span> <span class="n">ta_evals_d</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Incumbent evaluations&#39;</span><span class="p">,</span> <span class="n">ta_evals_i</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Budget spent evaluating configurations&#39;</span><span class="p">,</span> <span class="n">ta_runtime</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;p-value of paired permutation test&#39;</span><span class="p">,</span> <span class="n">p_value_perm</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;p-value of paired t-test&#39;</span><span class="p">,</span> <span class="n">p_value_t</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Cutoff&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Walltime budget&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">wallclock_limit</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Runcount budget&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">ta_run_limit</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;CPU budget&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">algo_runs_timelimit</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Deterministic&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">deterministic</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;empty2&#39;</span><span class="p">,</span> <span class="s1">&#39;empty2&#39;</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;empty3&#39;</span><span class="p">,</span> <span class="s1">&#39;empty3&#39;</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Runs per Config (min)&#39;</span><span class="p">,</span> <span class="n">min_ta_evals</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Runs per Config (mean)&#39;</span><span class="p">,</span> <span class="n">mean_ta_evals</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;# Runs per Config (max)&#39;</span><span class="p">,</span> <span class="n">max_ta_evals</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;Total number of configuration runs&#39;</span><span class="p">,</span> <span class="n">ta_evals</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;empty4&#39;</span><span class="p">,</span> <span class="s1">&#39;empty4&#39;</span><span class="p">),</span>
+                                <span class="p">(</span><span class="s1">&#39;empty5&#39;</span><span class="p">,</span> <span class="s1">&#39;empty5&#39;</span><span class="p">),</span>
+                               <span class="p">])</span>
+        <span class="c1"># Split into two columns</span>
+        <span class="n">overview_split</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_split_table</span><span class="p">(</span><span class="n">overview</span><span class="p">)</span>
+        <span class="c1"># Convert to HTML</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">overview_split</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+        <span class="c1"># Insert empty lines</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;empty&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39;&amp;nbsp&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">table</span></div>
+
+<div class="viewcode-block" id="Analyzer.create_performance_table"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.create_performance_table">[docs]</a>    <span class="k">def</span> <span class="nf">create_performance_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create table, compare default against incumbent on train-,</span>
+<span class="sd">        test- and combined instances. Listing PAR10, PAR1 and timeouts.</span>
+<span class="sd">        Distinguishes between train and test, if available.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... create performance table&quot;</span><span class="p">)</span>
+        <span class="n">def_timeout</span><span class="p">,</span> <span class="n">inc_timeout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_timeouts</span><span class="p">(</span><span class="n">default</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_timeouts</span><span class="p">(</span><span class="n">incumbent</span><span class="p">)</span>
+        <span class="n">def_par10</span><span class="p">,</span> <span class="n">inc_par10</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parX</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parX</span><span class="p">(</span><span class="n">incumbent</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">def_par1</span><span class="p">,</span> <span class="n">inc_par1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parX</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parX</span><span class="p">(</span><span class="n">incumbent</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">dec_place</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_test</span><span class="p">:</span>
+            <span class="c1"># Distinction between train and test</span>
+            <span class="c1"># Create table</span>
+            <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="nb">round</span><span class="p">(</span><span class="n">def_par10</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par10</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">def_par10</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par10</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">)],</span>
+                              <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">def_par1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">def_par1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec_place</span><span class="p">)],</span>
+                              <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">def_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">def_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span>
+                               <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inc_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">inc_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span>
+                               <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">def_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">def_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]),</span>
+                               <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inc_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">inc_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+                               <span class="p">]])</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">array</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PAR10&#39;</span><span class="p">,</span> <span class="s1">&#39;PAR1&#39;</span><span class="p">,</span> <span class="s1">&#39;Timeouts&#39;</span><span class="p">],</span>
+                           <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Default&#39;</span><span class="p">,</span> <span class="s1">&#39;Incumbent&#39;</span><span class="p">,</span> <span class="s1">&#39;Default&#39;</span><span class="p">,</span> <span class="s1">&#39;Incumbent&#39;</span><span class="p">])</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+            <span class="c1"># Insert two-column-header</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;&lt;/thead&gt;&#39;</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">new_table</span> <span class="o">=</span> <span class="s2">&quot;&lt;table border=</span><span class="se">\&quot;</span><span class="s2">3</span><span class="se">\&quot;</span><span class="s2"> class=</span><span class="se">\&quot;</span><span class="s2">dataframe</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;  &lt;col&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;  &lt;colgroup span=</span><span class="se">\&quot;</span><span class="s2">2</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/colgroup&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;  &lt;colgroup span=</span><span class="se">\&quot;</span><span class="s2">2</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/colgroup&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;  &lt;thead&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;    &lt;tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;td rowspan=</span><span class="se">\&quot;</span><span class="s2">2</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/td&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th colspan=</span><span class="se">\&quot;</span><span class="s2">2</span><span class="se">\&quot;</span><span class="s2"> scope=</span><span class="se">\&quot;</span><span class="s2">colgroup</span><span class="se">\&quot;</span><span class="s2">&gt;Train&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th colspan=</span><span class="se">\&quot;</span><span class="s2">2</span><span class="se">\&quot;</span><span class="s2"> scope=</span><span class="se">\&quot;</span><span class="s2">colgroup</span><span class="se">\&quot;</span><span class="s2">&gt;Test&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;    &lt;/tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;    &lt;tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th scope=</span><span class="se">\&quot;</span><span class="s2">col</span><span class="se">\&quot;</span><span class="s2">&gt;Default&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th scope=</span><span class="se">\&quot;</span><span class="s2">col</span><span class="se">\&quot;</span><span class="s2">&gt;Incumbent&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th scope=</span><span class="se">\&quot;</span><span class="s2">col</span><span class="se">\&quot;</span><span class="s2">&gt;Default&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;      &lt;th scope=</span><span class="se">\&quot;</span><span class="s2">col</span><span class="se">\&quot;</span><span class="s2">&gt;Incumbent&lt;/th&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;    &lt;/tr&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>\
+                        <span class="s2">&quot;&lt;/thead&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">new_table</span> <span class="o">+</span> <span class="n">table</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># No distinction between train and test</span>
+            <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="nb">round</span><span class="p">(</span><span class="n">def_par10</span><span class="p">,</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par10</span><span class="p">,</span> <span class="n">dec_place</span><span class="p">)],</span>
+                              <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">def_par1</span><span class="p">,</span> <span class="n">dec_place</span><span class="p">),</span>
+                               <span class="nb">round</span><span class="p">(</span><span class="n">inc_par1</span><span class="p">,</span> <span class="n">dec_place</span><span class="p">)],</span>
+                              <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">def_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">def_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                               <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">inc_timeout</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inc_timeout</span><span class="p">[</span><span class="mi">1</span><span class="p">])]])</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">array</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PAR10&#39;</span><span class="p">,</span> <span class="s1">&#39;PAR1&#39;</span><span class="p">,</span> <span class="s1">&#39;Timeouts&#39;</span><span class="p">],</span>
+                           <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Default&#39;</span><span class="p">,</span> <span class="s1">&#39;Incumbent&#39;</span><span class="p">])</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">performance_table</span> <span class="o">=</span> <span class="n">table</span>
+        <span class="k">return</span> <span class="n">table</span></div>
+
+<div class="viewcode-block" id="Analyzer.config_to_html"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.config_to_html">[docs]</a>    <span class="k">def</span> <span class="nf">config_to_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">:</span> <span class="n">Configuration</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create HTML-table to compare Configurations.</span>
+<span class="sd">        Removes unused parameters.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default, incumbent: Configurations</span>
+<span class="sd">            configurations to be converted</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        table: str</span>
+<span class="sd">            HTML-table comparing default and incumbent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Remove unused parameters</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">default</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">default</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="ow">or</span> <span class="n">incumbent</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+        <span class="n">default</span> <span class="o">=</span> <span class="p">[</span><span class="n">default</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">if</span> <span class="n">default</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;inactive&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span>
+        <span class="n">incumbent</span> <span class="o">=</span> <span class="p">[</span><span class="n">incumbent</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">if</span> <span class="n">incumbent</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;inactive&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">))</span>
+        <span class="c1"># Show first parameters that changed</span>
+        <span class="n">same</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">table</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">table</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="s2">&quot;-------------- Changed parameters: &quot;</span>\
+                           <span class="s2">&quot;--------------&quot;</span><span class="p">,</span> <span class="s2">&quot;-----&quot;</span><span class="p">,</span> <span class="s2">&quot;-----&quot;</span><span class="p">)])</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">same</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="s2">&quot;-------------- Unchanged parameters: &quot;</span>\
+                           <span class="s2">&quot;--------------&quot;</span><span class="p">,</span> <span class="s2">&quot;-----&quot;</span><span class="p">,</span> <span class="s2">&quot;-----&quot;</span><span class="p">)])</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">same</span><span class="p">)</span>
+        <span class="n">keys</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">table</span><span class="p">],</span> <span class="p">[</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">table</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Default&quot;</span><span class="p">,</span> <span class="s2">&quot;Incumbent&quot;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">keys</span><span class="p">)</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">table</span></div>
+
+    <span class="k">def</span> <span class="nf">_split_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Splits an OrderedDict into a list of tuples that can be turned into a</span>
+<span class="sd">        HTML-table with pandas DataFrame</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        table: OrderedDict</span>
+<span class="sd">            table that is to be split into two columns</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        table_split: List[tuple(key, value, key, value)]</span>
+<span class="sd">            list with two key-value pairs per entry that can be used by pandas</span>
+<span class="sd">            df.to_html()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">table_split</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">half_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">half_size</span><span class="p">):</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">half_size</span>
+            <span class="n">table_split</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;&lt;b&gt;&quot;</span> <span class="o">+</span> <span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;/b&gt;&quot;</span><span class="p">,</span> <span class="n">table</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
+                                <span class="s2">&quot;&lt;b&gt;&quot;</span> <span class="o">+</span> <span class="n">keys</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;/b&gt;&quot;</span><span class="p">,</span> <span class="n">table</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">j</span><span class="p">]]))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">table_split</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s2">&quot;&lt;b&gt;&quot;</span><span class="o">+</span><span class="n">keys</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;&lt;/b&gt;&quot;</span><span class="p">,</span> <span class="n">table</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">table_split</span>
+
+<span class="c1">####################################### PARAMETER IMPORTANCE #######################################</span>
+<div class="viewcode-block" id="Analyzer.fanova"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.fanova">[docs]</a>    <span class="k">def</span> <span class="nf">fanova</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">,</span> <span class="n">marginal_threshold</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper for parameter_importance to save the importance-object/</span>
+<span class="sd">        extract the results. We want to show the top X most important</span>
+<span class="sd">        parameter-fanova-plots.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        incumbent: Configuration</span>
+<span class="sd">            incumbent configuration</span>
+<span class="sd">        marginal_threshold: float</span>
+<span class="sd">            parameter/s must be at least this important to be mentioned</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fanova_table: str</span>
+<span class="sd">            html table with importances for all parameters</span>
+<span class="sd">        plots: Dict[str: st]</span>
+<span class="sd">            dictionary mapping single parameters to their plots</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameter_importance</span><span class="p">(</span><span class="s2">&quot;fanova&quot;</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+        <span class="n">parameter_imp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">evaluator</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span>
+        <span class="c1"># Split single and pairwise (pairwise are string: &quot;[&#39;p1&#39;,&#39;p2&#39;]&quot;)</span>
+        <span class="n">pairwise_imp</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">parameter_imp</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">)}</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">pairwise_imp</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">parameter_imp</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+        <span class="c1"># Set internal parameter importance for further analysis (such as</span>
+        <span class="c1">#   parallel coordinates)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Fanova importance: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">parameter_imp</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span><span class="p">[</span><span class="s1">&#39;fanova&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parameter_imp</span>
+
+        <span class="c1"># Dicts to lists of tuples, sorted descending after importance and only</span>
+        <span class="c1">#   including marginals &gt; 0.05</span>
+        <span class="n">parameter_imp</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parameter_imp</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+                                <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">]</span>
+        <span class="n">pairwise_imp</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pairwise_imp</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+                                <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">]</span>
+        <span class="c1"># Create table</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameter_imp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="o">+</span><span class="s2">&quot; Single importance: &quot;</span><span class="o">+</span><span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="p">)])</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">parameter_imp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pairwise_imp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="o">+</span><span class="s2">&quot; Pairwise importance: &quot;</span><span class="o">+</span><span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="s2">&quot;-&quot;</span><span class="p">)])</span>
+            <span class="c1"># TODO assuming (current) form of &quot;[&#39;param1&#39;,&#39;param2&#39;]&quot;, but not</span>
+            <span class="c1">#       expecting it stays this way (on PIMPs side)</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="s1">&#39; &amp; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">tmp</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1"> &#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="n">k</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;[]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]),</span> <span class="n">v</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pairwise_imp</span><span class="p">])</span>
+
+        <span class="n">keys</span><span class="p">,</span> <span class="n">fanova_table</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">table</span><span class="p">],</span> <span class="p">[</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">fanova_table</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">keys</span><span class="p">)</span>
+        <span class="n">fanova_table</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+        <span class="n">single_plots</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">parameter_imp</span><span class="p">:</span>
+            <span class="n">single_plots</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="s2">&quot;fanova&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+        <span class="c1"># Check for pairwise plots</span>
+        <span class="c1"># Right now no way to access paths of the plots -&gt; file issue</span>
+        <span class="n">pairwise_plots</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pairwise_imp</span><span class="p">:</span>
+            <span class="n">p_new</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">potential_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;fanova&#39;</span><span class="p">,</span> <span class="n">p_new</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Check for </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">potential_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">potential_path</span><span class="p">):</span>
+                <span class="n">pairwise_plots</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">potential_path</span>
+        <span class="k">return</span> <span class="n">fanova_table</span><span class="p">,</span> <span class="n">single_plots</span><span class="p">,</span> <span class="n">pairwise_plots</span></div>
+
+<div class="viewcode-block" id="Analyzer.local_epm_plots"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.local_epm_plots">[docs]</a>    <span class="k">def</span> <span class="nf">local_epm_plots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">plots</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameter_importance</span><span class="p">(</span><span class="s2">&quot;lpi&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span><span class="p">[</span><span class="s1">&#39;lpi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+                            <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">]:</span>
+            <span class="n">plots</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;lpi&#39;</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">plots</span></div>
+
+<div class="viewcode-block" id="Analyzer.parameter_importance"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.parameter_importance">[docs]</a>    <span class="k">def</span> <span class="nf">parameter_importance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modus</span><span class="p">,</span> <span class="n">incumbent</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate parameter-importance using the PIMP-package.</span>
+<span class="sd">        Currently ablation, forward-selection and fanova are used.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        modus: str</span>
+<span class="sd">            modus for parameter importance, from</span>
+<span class="sd">            [forward-selection, ablation, fanova, lpi]</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        importance: pimp.Importance</span>
+<span class="sd">            importance object with evaluated data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... parameter importance </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">modus</span><span class="p">))</span>
+        <span class="c1"># Evaluate parameter importance</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">evaluate_scenario</span><span class="p">([</span><span class="n">modus</span><span class="p">],</span> <span class="n">output</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">evaluator</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span><span class="p">[</span><span class="n">modus</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">evaluator</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span></div>
+
+<div class="viewcode-block" id="Analyzer.importance_table"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.importance_table">[docs]</a>    <span class="k">def</span> <span class="nf">importance_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pimp_sort_table_by</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a html-table over all evaluated parameter-importance-methods.</span>
+<span class="sd">        Parameters are sorted after their average importance.&quot;&quot;&quot;</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_hyperparameters</span><span class="p">()]</span>
+        <span class="n">index</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span><span class="p">]</span>
+        <span class="n">columns_lower</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Sort pimp-table by </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pimp_sort_table_by</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pimp_sort_table_by</span> <span class="o">==</span> <span class="s2">&quot;average&quot;</span><span class="p">:</span>
+            <span class="c1"># Sort parameters after average importance</span>
+            <span class="n">p_avg</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span>
+                        <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">e</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span><span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">}</span>
+            <span class="n">p_avg</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span> <span class="p">:</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span> <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">p_avg</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="n">p_order</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p_avg</span><span class="p">[</span><span class="n">p</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">pimp_sort_table_by</span> <span class="ow">in</span> <span class="n">columns_lower</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">__get_key</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+                <span class="n">imp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span><span class="p">[</span><span class="n">columns_lower</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">pimp_sort_table_by</span><span class="p">)]</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span>
+                <span class="k">return</span> <span class="n">imp</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">imp</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">p_order</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span>
+                             <span class="n">key</span><span class="o">=</span><span class="n">__get_key</span><span class="p">,</span>
+                             <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Trying to sort importance table after </span><span class="si">{}</span><span class="s2">, which &quot;</span>
+                             <span class="s2">&quot;was not evaluated.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pimp_sort_table_by</span><span class="p">))</span>
+
+        <span class="c1"># Only add parameters where at least one evaluator shows importance &gt; threshold</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">p_order</span><span class="p">:</span>
+            <span class="n">values_for_p</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">add_parameter</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluators</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">e</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span><span class="p">:</span>
+                    <span class="n">value_percent</span> <span class="o">=</span> <span class="nb">format</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">evaluated_parameter_importance</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*</span>
+                                           <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;.2f&#39;</span><span class="p">)</span>
+                    <span class="n">values_for_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value_percent</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">value_percent</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">:</span>
+                        <span class="n">add_parameter</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">values_for_p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">add_parameter</span><span class="p">:</span>
+                <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">values_for_p</span><span class="p">)</span>
+                <span class="n">index</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+        <span class="n">comp_table</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">comp_table</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span></div>
+
+<span class="c1">####################################### FEATURE IMPORTANCE #######################################</span>
+<div class="viewcode-block" id="Analyzer.feature_importance"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.feature_importance">[docs]</a>    <span class="k">def</span> <span class="nf">feature_importance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... plotting feature importance&quot;</span><span class="p">)</span>
+        <span class="c1"># forward_selector = FeatureForwardSelector(self.scenario,</span>
+        <span class="c1">#         self.original_rh)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">forwardsel_feat_imp</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">_parameters_to_evaluate</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">forwardsel_cv</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">dir_</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;feature_plots/importance&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dir_</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dir_</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pimp</span><span class="o">.</span><span class="n">evaluate_scenario</span><span class="p">([</span><span class="s1">&#39;forward-selection&#39;</span><span class="p">],</span> <span class="n">dir_</span><span class="p">)</span>
+        <span class="n">imp</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;forward-selection&#39;</span><span class="p">][</span><span class="s1">&#39;imp&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;FEAT IMP </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">imp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_importance</span> <span class="o">=</span> <span class="n">imp</span>
+        <span class="n">plots</span> <span class="o">=</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_</span><span class="p">,</span> <span class="s1">&#39;forward-selection-barplot.png&#39;</span><span class="p">),</span>
+                 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_</span><span class="p">,</span> <span class="s1">&#39;forward-selection-chng.png&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">imp</span><span class="p">,</span> <span class="n">plots</span><span class="p">)</span></div>
+
+<span class="c1">####################################### PLOTS #######################################</span>
+
+<div class="viewcode-block" id="Analyzer.plot_parallel_coordinates"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_parallel_coordinates">[docs]</a>    <span class="k">def</span> <span class="nf">plot_parallel_coordinates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_param</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_configs</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Creates a parallel coordinates plot visualizing the explored</span>
+<span class="sd">        parameter configuration space. &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... plotting parallel coordinates&quot;</span><span class="p">)</span>
+        <span class="c1"># If a parameter importance has been performed in this analyzer-object,</span>
+        <span class="c1"># only plot the n_param most important parameters.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span><span class="p">:</span>
+            <span class="c1"># Use the first applied parameter importance analysis to choose</span>
+            <span class="n">method</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">param_imp</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Choosing used parameters in parallel coordinates &quot;</span>
+                              <span class="s2">&quot;according to parameter importance method </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+                              <span class="n">method</span><span class="p">)</span>
+            <span class="n">n_param</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_param</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">importance</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                                               <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">])))</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">importance</span><span class="o">.</span><span class="n">keys</span><span class="p">())[:</span><span class="n">n_param</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># TODO what if no parameter importance has been performed?</span>
+            <span class="c1"># plot all? random subset? -&gt; atm: random</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No parameter importance performed. Plotting random &quot;</span>
+                             <span class="s2">&quot;parameters in parallel coordinates plot.&quot;</span><span class="p">)</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">keys</span><span class="p">())[:</span><span class="n">n_param</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;    plotting </span><span class="si">%s</span><span class="s2"> parameters for (max) </span><span class="si">%s</span><span class="s2"> configurations&quot;</span><span class="p">,</span>
+                         <span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">),</span> <span class="n">n_configs</span><span class="p">)</span>
+        <span class="n">rh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">original_rh</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">vizrh</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">vizrh</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">plot_parallel_coordinates</span><span class="p">(</span><span class="n">rh</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span>
+                                                      <span class="n">params</span><span class="p">,</span> <span class="n">n_configs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">validator</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">path</span></div>
+
+<div class="viewcode-block" id="Analyzer.plot_cdf"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_cdf">[docs]</a>    <span class="k">def</span> <span class="nf">plot_cdf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... plotting eCDF&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">plot_cdf_compare</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Analyzer.plot_scatter"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_scatter">[docs]</a>    <span class="k">def</span> <span class="nf">plot_scatter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... plotting scatter&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">plot_scatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Analyzer.plot_confviz"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_confviz">[docs]</a>    <span class="nd">@timing</span>
+    <span class="k">def</span> <span class="nf">plot_confviz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incumbents</span><span class="p">,</span> <span class="n">runhistories</span><span class="p">,</span> <span class="n">max_confs</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot the visualization of configurations, highlightning the</span>
+<span class="sd">        incumbents. Using original rh, so the explored configspace can be</span>
+<span class="sd">        estimated.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        incumbents: List[Configuration]</span>
+<span class="sd">            list with incumbents, so they can be marked in plot</span>
+<span class="sd">        runhistories: List[RunHistory]</span>
+<span class="sd">            list of runhistories, so they can be marked in plot</span>
+<span class="sd">        max_confs: int</span>
+<span class="sd">            maximum number of data-points to plot</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        confviz: str</span>
+<span class="sd">            script to generate the interactive html</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... visualizing explored configspace&quot;</span><span class="p">)</span>
+        <span class="n">confviz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">visualize_configs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="p">,</span>
+                    <span class="n">runhistories</span><span class="o">=</span><span class="n">runhistories</span><span class="p">,</span> <span class="n">incumbents</span><span class="o">=</span><span class="n">incumbents</span><span class="p">,</span>
+                    <span class="n">max_confs_plot</span><span class="o">=</span><span class="n">max_confs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">confviz</span></div>
+
+<div class="viewcode-block" id="Analyzer.plot_cost_over_time"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_cost_over_time">[docs]</a>    <span class="nd">@timing</span>
+    <span class="k">def</span> <span class="nf">plot_cost_over_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runs</span><span class="p">,</span> <span class="n">validator</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... cost over time&quot;</span><span class="p">)</span>
+        <span class="n">script</span><span class="p">,</span> <span class="n">div</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plotter</span><span class="o">.</span><span class="n">plot_cost_over_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span> <span class="n">runs</span><span class="p">,</span>
+                                                       <span class="n">validator</span><span class="o">=</span><span class="n">validator</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">script</span><span class="p">,</span> <span class="n">div</span></div>
+
+<div class="viewcode-block" id="Analyzer.plot_algorithm_footprint"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.plot_algorithm_footprint">[docs]</a>    <span class="nd">@timing</span>
+    <span class="k">def</span> <span class="nf">plot_algorithm_footprint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">purity</span><span class="o">=</span><span class="mf">0.95</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">algorithms</span><span class="p">:</span>
+            <span class="n">algorithms</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">),</span>
+                                      <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">incumbent</span><span class="p">,</span> <span class="s2">&quot;incumbent&quot;</span><span class="p">)])</span>
+        <span class="c1"># filter instance features</span>
+        <span class="n">instances</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">train_insts</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span> <span class="o">==</span> <span class="p">[</span><span class="kc">None</span><span class="p">]:</span>
+            <span class="n">instances</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">test_insts</span><span class="p">)</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span> <span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">feature_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">instances</span><span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... algorithm footprints for: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">algorithms</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+        <span class="n">footprint</span> <span class="o">=</span> <span class="n">AlgorithmFootprint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validated_rh</span><span class="p">,</span>
+                                       <span class="n">features</span><span class="p">,</span> <span class="n">algorithms</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="o">.</span><span class="n">cutoff</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span>
+                                       <span class="n">rng</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rng</span><span class="p">)</span>
+        <span class="c1"># Calculate footprints</span>
+        <span class="c1">#for i in range(100):</span>
+        <span class="c1">#    for a in algorithms:</span>
+        <span class="c1">#        footprint.footprint(a, 20, 0.95)</span>
+
+        <span class="c1"># Plot footprints</span>
+        <span class="n">plots2d</span> <span class="o">=</span> <span class="n">footprint</span><span class="o">.</span><span class="n">plot2d</span><span class="p">()</span>
+        <span class="n">plots3d</span> <span class="o">=</span> <span class="n">footprint</span><span class="o">.</span><span class="n">plot3d</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">plots2d</span><span class="p">,</span> <span class="n">plots3d</span><span class="p">)</span></div>
+
+<span class="c1">####################################### FEATURE ANALYSIS #######################################</span>
+
+<div class="viewcode-block" id="Analyzer.feature_analysis"><a class="viewcode-back" href="../../apidoc/cave.analyzer.html#cave.analyzer.Analyzer.feature_analysis">[docs]</a>    <span class="k">def</span> <span class="nf">feature_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                         <span class="n">mode</span><span class="p">,</span>
+                         <span class="n">feat_names</span><span class="p">,</span>
+                         <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Use asapys feature analysis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mode: str</span>
+<span class="sd">            from [box_violin, correlation, clustering]</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Corresponding plot paths</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;... feature analysis: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span> <span class="o">=</span> <span class="n">FeatureAnalysis</span><span class="p">(</span><span class="n">output_dn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">,</span>
+                                 <span class="n">scenario</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario</span><span class="p">,</span>
+                                 <span class="n">feat_names</span><span class="o">=</span><span class="n">feat_names</span><span class="p">,</span>
+                                 <span class="n">feat_importance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">feat_importance</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;box_violin&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span><span class="o">.</span><span class="n">get_box_violin_plots</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;correlation&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span><span class="o">.</span><span class="n">correlation_plot</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span><span class="o">.</span><span class="n">correlation_plot</span><span class="p">(</span><span class="n">imp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;clustering&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat_analysis</span><span class="o">.</span><span class="n">cluster_instances</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018, Marius Lindauer, Joshua Marben, Andre Biedenkapp.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

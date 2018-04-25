@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cave.utils.csv2rh &mdash; CAVE 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="CAVE 1.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CAVE
+          
+
+          
+            
+            <img src="../../../_static/cave.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">F.A.Q.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.analyzer.html">cave.analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.cave_cli.html">cave.cave_cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.cavefacade.html">cave.cavefacade module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.plot.html">cave.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.algorithm_footprint.html">cave.plot.algorithm_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.configurator_footprint.html">cave.plot.configurator_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.parallel_coordinates.html">cave.plot.parallel_coordinates module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.plotter.html">cave.plot.plotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.scatter.html">cave.plot.scatter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.html.html">cave.html package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.html.html_builder.html">cave.html.html_builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.reader.html">cave.reader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.base_reader.html">cave.reader.base_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.configurator_run.html">cave.reader.configurator_run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.csv2rh.html">cave.reader.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.csv_reader.html">cave.reader.csv_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.smac2_reader.html">cave.reader.smac2_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.smac3_reader.html">cave.reader.smac3_reader module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.utils.html">cave.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.convert_for_epm.html">cave.utils.convert_for_epm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.csv2rh.html">cave.utils.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.helpers.html">cave.utils.helpers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.io.html">cave.utils.io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.statistical_tests.html">cave.utils.statistical_tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.timing.html">cave.utils.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.tooltips.html">cave.utils.tooltips module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CAVE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>cave.utils.csv2rh</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for cave.utils.csv2rh</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">smac.runhistory.runhistory</span> <span class="k">import</span> <span class="n">RunHistory</span><span class="p">,</span> <span class="n">DataOrigin</span>
+<span class="kn">from</span> <span class="nn">smac.optimizer.objective</span> <span class="k">import</span> <span class="n">average_cost</span><span class="p">,</span> <span class="n">_cost</span>
+<span class="kn">from</span> <span class="nn">smac.utils.io.input_reader</span> <span class="k">import</span> <span class="n">InputReader</span>
+<span class="kn">from</span> <span class="nn">smac.tae.execute_ta_run</span> <span class="k">import</span> <span class="n">StatusType</span>
+
+<span class="kn">from</span> <span class="nn">ConfigSpace</span> <span class="k">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">ConfigurationSpace</span>
+<span class="kn">from</span> <span class="nn">ConfigSpace.hyperparameters</span> <span class="k">import</span> <span class="n">UniformFloatHyperparameter</span>
+<span class="kn">from</span> <span class="nn">ConfigSpace.read_and_write</span> <span class="k">import</span> <span class="n">pcs</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Joshua Marben&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright 2018, ML4AAD&quot;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;3-clause BSD&quot;</span>
+<span class="n">__maintainer__</span> <span class="o">=</span> <span class="s2">&quot;Joshua Marben&quot;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;joshua.marben@neptun.uni-freiburg.de&quot;</span>
+
+<div class="viewcode-block" id="CSV2RH"><a class="viewcode-back" href="../../../apidoc/cave.utils.csv2rh.html#cave.utils.csv2rh.CSV2RH">[docs]</a><span class="k">class</span> <span class="nc">CSV2RH</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="CSV2RH.read_csv_to_rh"><a class="viewcode-back" href="../../../apidoc/cave.utils.csv2rh.html#cave.utils.csv2rh.CSV2RH.read_csv_to_rh">[docs]</a>    <span class="k">def</span> <span class="nf">read_csv_to_rh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
+                       <span class="n">pcs</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ConfigurationSpace</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">configurations</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">train_inst</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">test_inst</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">instance_features</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Interpreting a .csv-file as runhistory.</span>
+<span class="sd">        Expecting file with headers:</span>
+<span class="sd">            p_parameter1, p_parameter2, ...,</span>
+<span class="sd">            i_instancefeature1 (o), i_instancefeature2 (o), ...,</span>
+<span class="sd">            seed (o), cost, time (o), status (o)</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        csv_path: str</span>
+<span class="sd">            relative path to csv-file from executing directory</span>
+<span class="sd">        pcs: Union</span>
+<span class="sd">        instance_features: dict[dict[str-&gt;float]] or str</span>
+<span class="sd">            instance features as dict mapping {inst : {feat_name : value}}</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        --------</span>
+<span class="sd">        rh: RunHistory</span>
+<span class="sd">            runhistory with all the runs from the csv-file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;cave.utils.csv2rh&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_reader</span> <span class="o">=</span> <span class="n">InputReader</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pcs</span> <span class="o">=</span> <span class="n">pcs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_inst</span> <span class="o">=</span> <span class="n">input_reader</span><span class="o">.</span><span class="n">read_instance_file</span><span class="p">(</span><span class="n">train_inst</span><span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">train_inst</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="k">else</span> <span class="n">train_inst</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_inst</span> <span class="o">=</span>  <span class="n">input_reader</span><span class="o">.</span><span class="n">read_instance_file</span><span class="p">(</span><span class="n">test_inst</span><span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">test_inst</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="k">else</span> <span class="n">test_inst</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">instance_features</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="n">names</span><span class="p">,</span> <span class="n">feats</span> <span class="o">=</span> <span class="n">input_reader</span><span class="o">.</span><span class="n">read_instance_features_file</span><span class="p">(</span><span class="n">instance_features</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">instance_features</span> <span class="o">=</span> <span class="n">feats</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">instance_features</span> <span class="o">=</span> <span class="n">instance_features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span> <span class="o">=</span> <span class="n">configurations</span> <span class="k">if</span> <span class="n">configurations</span> <span class="k">else</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cs</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Read in data</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">csv_path</span> <span class="o">=</span> <span class="n">data</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+                <span class="n">csv_data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span>
+                                           <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+            <span class="n">header</span><span class="p">,</span> <span class="n">csv_data</span> <span class="o">=</span> <span class="n">csv_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">csv_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">csv_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Headers: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+        <span class="c1"># Expecting header as described in docstring</span>
+        <span class="n">valid_values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;cost&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;config_id&#39;</span><span class="p">,</span> <span class="s1">&#39;instance_id&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Detected a duplicate in the columns of the &quot;</span>
+                             <span class="s2">&quot;csv-file </span><span class="se">\&quot;</span><span class="si">%s</span><span class="se">\&quot;</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">csv_path</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">column_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">valid_values</span> <span class="ow">or</span>
+                    <span class="n">column_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;p_&#39;</span><span class="p">)</span> <span class="ow">or</span>  <span class="c1"># parameter</span>
+                    <span class="n">column_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;i_&#39;</span><span class="p">)):</span>  <span class="c1"># instance feature</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> not a legal column name in </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">csv_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_complete_configs</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_complete_instances</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Found: seed=</span><span class="si">%s</span><span class="s2">, cost=</span><span class="si">%s</span><span class="s2">, time=</span><span class="si">%s</span><span class="s2">, status=</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                          <span class="s1">&#39;seed&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;cost&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                          <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+        <span class="c1"># Create RunHistory</span>
+        <span class="n">rh</span> <span class="o">=</span> <span class="n">RunHistory</span><span class="p">(</span><span class="n">average_cost</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">add_to_rh</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+            <span class="n">new_status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interpret_status</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;status&#39;</span> <span class="ow">in</span> <span class="n">row</span> <span class="k">else</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">SUCCESS</span>
+            <span class="n">rh</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;config_id&#39;</span><span class="p">]],</span>
+                   <span class="n">cost</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;cost&#39;</span><span class="p">],</span>
+                   <span class="n">time</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">row</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                   <span class="n">status</span><span class="o">=</span><span class="n">new_status</span><span class="p">,</span>
+                   <span class="n">instance_id</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;instance_id&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;instance_id&#39;</span> <span class="ow">in</span> <span class="n">row</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                   <span class="n">seed</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;seed&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;seed&#39;</span> <span class="ow">in</span> <span class="n">row</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                   <span class="n">additional_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                   <span class="n">origin</span><span class="o">=</span><span class="n">DataOrigin</span><span class="o">.</span><span class="n">INTERNAL</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">add_to_rh</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rh</span></div>
+
+<div class="viewcode-block" id="CSV2RH.get_cs"><a class="viewcode-back" href="../../../apidoc/cave.utils.csv2rh.html#cave.utils.csv2rh.CSV2RH.get_cs">[docs]</a>    <span class="k">def</span> <span class="nf">get_cs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># TODO use from pyimp after https://github.com/automl/ParameterImportance/issues/72 is implemented</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcs</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pcs</span><span class="p">)</span> <span class="o">==</span> <span class="n">ConfigurationSpace</span><span class="p">:</span>
+            <span class="n">cs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcs</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">pcs</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pcs</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;p_&#39;</span><span class="p">)]</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pcs</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+                <span class="n">cs</span> <span class="o">=</span> <span class="n">pcs</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">get_hyperparameter_names</span><span class="p">())</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">parameters</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Comparing parameters from </span><span class="se">\&quot;</span><span class="si">%s</span><span class="se">\&quot;</span><span class="s2"> and csv. &quot;</span>
+                                 <span class="s2">&quot;In pcs but not in csv: [</span><span class="si">%s</span><span class="s2">]. &quot;</span>
+                                 <span class="s2">&quot;In csv but not in pcs: [</span><span class="si">%s</span><span class="s2">]. &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pcs</span><span class="p">,</span>
+                                 <span class="nb">str</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">get_hyperparameter_names</span><span class="p">())</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">parameters</span><span class="p">))),</span>
+                                 <span class="nb">str</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cs</span><span class="o">.</span><span class="n">get_hyperparameter_names</span><span class="p">())))))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;p_&#39;</span><span class="p">)]</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No parameter configuration space (pcs) provided! &quot;</span>
+                          <span class="s2">&quot;Interpreting all parameters as floats. This might lead &quot;</span>
+                          <span class="s2">&quot;to suboptimal analysis.&quot;</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+            <span class="n">minima</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>  <span class="c1"># to define ranges of hyperparameters</span>
+            <span class="n">maxima</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="n">cs</span> <span class="o">=</span> <span class="n">ConfigurationSpace</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+                <span class="n">cs</span><span class="o">.</span><span class="n">add_hyperparameter</span><span class="p">(</span><span class="n">UniformFloatHyperparameter</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span>
+                                      <span class="n">lower</span><span class="o">=</span><span class="n">minima</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="n">maxima</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cs</span> <span class="o">=</span> <span class="n">cs</span></div>
+
+    <span class="k">def</span> <span class="nf">_interpret_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;SAT&quot;</span><span class="p">,</span> <span class="s2">&quot;UNSAT&quot;</span><span class="p">,</span> <span class="s2">&quot;SUCCESS&quot;</span><span class="p">]:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">SUCCESS</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;TIMEOUT&quot;</span><span class="p">]:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">TIMEOUT</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;CRASHED&quot;</span><span class="p">]:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">CRASHED</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ABORT&quot;</span><span class="p">]:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">ABORT</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;MEMOUT&quot;</span><span class="p">]:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">MEMOUT</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Could not parse </span><span class="si">%s</span><span class="s2"> as a status. Valid values are: &quot;</span>
+                           <span class="s2">&quot;[SUCCESS, TIMEOUT, CRASHED, ABORT, MEMOUT]. &quot;</span>
+                           <span class="s2">&quot;Treating as CRASHED run.&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">StatusType</span><span class="o">.</span><span class="n">CRASHED</span>
+        <span class="k">return</span> <span class="n">status</span>
+
+    <span class="k">def</span> <span class="nf">_complete_configs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Either config is None or parameters an empty list.</span>
+<span class="sd">        After completion, every unique configuration in the data will have a</span>
+<span class="sd">        corresponding id. If specified via parameters, they will be replaced by</span>
+<span class="sd">        the config-id.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        config_id: bool</span>
+<span class="sd">            if not False, column_id-column present,</span>
+<span class="sd">            read in configurations from somewhere</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;p_&#39;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="s1">&#39;config_id&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Define configs either via </span><span class="se">\&quot;</span><span class="s2">p_</span><span class="se">\&quot;</span><span class="s2"> or </span><span class="se">\&quot;</span><span class="s2">config</span><span class="se">\&quot;</span><span class="s2"> in header, not both.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;config_id&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;When defining configs with </span><span class="se">\&quot;</span><span class="s2">config_id</span><span class="se">\&quot;</span><span class="s2"> &quot;</span>
+                                 <span class="s2">&quot;in header, you need to provide the argument &quot;</span>
+                                 <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">configurations</span><span class="se">\&quot;</span><span class="s2"> to the CSV2RH-object.&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="c1"># Read in configs from csv</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+                    <span class="n">config_data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span>
+                                               <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+                <span class="n">header</span><span class="p">,</span> <span class="n">config_data</span> <span class="o">=</span> <span class="n">config_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">config_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]])[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">config_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+                <span class="n">config_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;CONFIG_ID&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">config_data</span> <span class="o">=</span> <span class="n">config_data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+                <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p_&#39;</span> <span class="o">+</span> <span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">config_data</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+                <span class="c1"># Create and fill in p_-columns for cs-creation</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">def</span> <span class="nf">fill_parameters</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+                    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+                        <span class="n">row</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;config_id&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">:]]</span>
+                    <span class="k">return</span> <span class="n">row</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fill_parameters</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_cs</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">config_data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">,</span>
+                            <span class="n">values</span><span class="o">=</span><span class="p">{</span><span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span>
+                                             <span class="nb">zip</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">row</span><span class="p">)})</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span> <span class="o">=</span> <span class="p">{</span><span class="n">conf</span> <span class="p">:</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">conf</span> <span class="ow">in</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span> <span class="o">=</span> <span class="p">{</span><span class="n">conf</span> <span class="p">:</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">conf</span> <span class="ow">in</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_cs</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">parameters</span><span class="p">:</span>
+            <span class="c1"># Add new column for config-ids</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;config_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="c1"># Configs are defined via individual &quot;p_&quot;-header-columns</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_cs</span><span class="p">()</span>
+            <span class="k">def</span> <span class="nf">add_config</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cs</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">{</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">p</span><span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span>
+                                                   <span class="n">parameters</span><span class="p">})</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="c1"># New index (unseen config)</span>
+                    <span class="n">new_id</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span><span class="p">[</span><span class="n">config</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_id</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">[</span><span class="n">new_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span>
+                <span class="n">row</span><span class="p">[</span><span class="s1">&#39;config_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_to_id</span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">row</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">add_config</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Define configs either via </span><span class="se">\&quot;</span><span class="s2">p_</span><span class="se">\&quot;</span><span class="s2"> or </span><span class="se">\&quot;</span><span class="s2">config_id</span><span class="se">\&quot;</span><span class="s2"> in header.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_complete_instances</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_to_inst_feats</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">inst_feats</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;i_&#39;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">inst_feats</span> <span class="ow">and</span> <span class="s1">&#39;instance_id&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Define instances either via </span><span class="se">\&quot;</span><span class="s2">i_</span><span class="se">\&quot;</span><span class="s2"> or </span><span class="se">\&quot;</span><span class="s2">instance_id</span><span class="se">\&quot;</span><span class="s2"> in header, not both.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;instance_id&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">instance_features</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">id_to_inst_feats</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span> <span class="p">:</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">instance_features</span><span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span> <span class="o">=</span> <span class="p">{</span><span class="n">feat</span> <span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">id_to_inst_feats</span><span class="p">}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Instances defined but no instance features available.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">inst_feats</span><span class="p">:</span>
+            <span class="c1"># Add new column for instance-ids</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;instance_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="c1"># Instances are defined via individual &quot;i_&quot;-header-columns</span>
+            <span class="k">def</span> <span class="nf">add_instance</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+                <span class="n">features</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">inst_feats</span><span class="p">])</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">features</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="n">new_id</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span><span class="p">[</span><span class="n">features</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_id</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">id_to_config</span><span class="p">[</span><span class="n">new_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">features</span>
+                <span class="n">row</span><span class="p">[</span><span class="s1">&#39;instance_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inst_feats_to_id</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">row</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">add_instance</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No instances detected. Define instances either via </span><span class="se">\&quot;</span><span class="s2">i_</span><span class="se">\&quot;</span><span class="s2"> or </span><span class="se">\&quot;</span><span class="s2">instance_id</span><span class="se">\&quot;</span><span class="s2"> in header.&quot;</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018, Marius Lindauer, Joshua Marben, Andre Biedenkapp.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

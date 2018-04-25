@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cave.analyzer module &mdash; CAVE 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="CAVE 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../api.html"/>
+        <link rel="next" title="cave.cave_cli module" href="cave.cave_cli.html"/>
+        <link rel="prev" title="API Documentation" href="../api.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CAVE
+          
+
+          
+            
+            <img src="../_static/cave.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">F.A.Q.</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cave.analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cave.cave_cli.html">cave.cave_cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cave.cavefacade.html">cave.cavefacade module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cave.plot.html">cave.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.algorithm_footprint.html">cave.plot.algorithm_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.configurator_footprint.html">cave.plot.configurator_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.parallel_coordinates.html">cave.plot.parallel_coordinates module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.plotter.html">cave.plot.plotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.plot.scatter.html">cave.plot.scatter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.html.html">cave.html package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.html.html_builder.html">cave.html.html_builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.reader.html">cave.reader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.base_reader.html">cave.reader.base_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.configurator_run.html">cave.reader.configurator_run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.csv2rh.html">cave.reader.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.csv_reader.html">cave.reader.csv_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.smac2_reader.html">cave.reader.smac2_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.reader.smac3_reader.html">cave.reader.smac3_reader module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cave.utils.html">cave.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.convert_for_epm.html">cave.utils.convert_for_epm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.csv2rh.html">cave.utils.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.helpers.html">cave.utils.helpers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.io.html">cave.utils.io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.statistical_tests.html">cave.utils.statistical_tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.timing.html">cave.utils.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cave.utils.tooltips.html">cave.utils.tooltips module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CAVE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li>cave.analyzer module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/cave.analyzer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cave.analyzer">
+<span id="cave-analyzer-module"></span><h1>cave.analyzer module<a class="headerlink" href="#module-cave.analyzer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cave.analyzer.Analyzer">
+<em class="property">class </em><code class="descclassname">cave.analyzer.</code><code class="descname">Analyzer</code><span class="sig-paren">(</span><em>original_rh</em>, <em>validated_rh</em>, <em>best_run</em>, <em>train_test</em>, <em>scenario</em>, <em>validator</em>, <em>pimp</em>, <em>model</em>, <em>output</em>, <em>max_pimp_samples</em>, <em>fanova_pairwise=True</em>, <em>rng=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class serves as an interface to all the individual analyzing and
+plotting components. The plotter object is responsible for the actual
+plotting of things, but should not be invoked via the facade (which is
+constructed for cmdline-usage).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>original_rh</strong> (<em>RunHistory</em>) – runhistory containing all runs that have actually been run</li>
+<li><strong>validated_rh</strong> (<em>RunHistory</em>) – runhistory containing all runs from original_rh + estimates for
+default and all incumbents for all instances</li>
+<li><strong>incumbent</strong> (<em>default</em><em>,</em>) – default and overall incumbent</li>
+<li><strong>train_test</strong> (<em>bool</em>) – whether is distinction is made (in cdf and scatter)</li>
+<li><strong>scenario</strong> (<em>Scenario</em>) – the scenario object</li>
+<li><strong>validator</strong> (<em>Validator</em>) – validator object (to estimate using EPM)</li>
+<li><strong>pimp</strong> (<em>Importance</em>) – parameter importance object with trained model</li>
+<li><strong>model</strong> (<em>RandomForest</em>) – random forest trained on original (combinated) runhistory</li>
+<li><strong>output</strong> (<em>string</em>) – output-directory</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.config_to_html">
+<code class="descname">config_to_html</code><span class="sig-paren">(</span><em>default: ConfigSpace.configuration_space.Configuration</em>, <em>incumbent: ConfigSpace.configuration_space.Configuration</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.config_to_html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.config_to_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create HTML-table to compare Configurations.
+Removes unused parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>incumbent</strong> (<em>default</em><em>,</em>) – configurations to be converted</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>table</strong> – HTML-table comparing default and incumbent</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.create_overview_table">
+<code class="descname">create_overview_table</code><span class="sig-paren">(</span><em>best_folder</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.create_overview_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.create_overview_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create overview-table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>best_folder</strong> (<em>str</em>) – path to folder/run with best incumbent</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>table</strong> – overview table in HTML</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.create_performance_table">
+<code class="descname">create_performance_table</code><span class="sig-paren">(</span><em>default</em>, <em>incumbent</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.create_performance_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.create_performance_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create table, compare default against incumbent on train-,
+test- and combined instances. Listing PAR10, PAR1 and timeouts.
+Distinguishes between train and test, if available.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.fanova">
+<code class="descname">fanova</code><span class="sig-paren">(</span><em>incumbent</em>, <em>marginal_threshold=0.05</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.fanova"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.fanova" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for parameter_importance to save the importance-object/
+extract the results. We want to show the top X most important
+parameter-fanova-plots.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>incumbent</strong> (<em>Configuration</em>) – incumbent configuration</li>
+<li><strong>marginal_threshold</strong> (<em>float</em>) – parameter/s must be at least this important to be mentioned</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>fanova_table</strong> (<em>str</em>) – html table with importances for all parameters</li>
+<li><strong>plots</strong> (<em>Dict[str: st]</em>) – dictionary mapping single parameters to their plots</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.feature_analysis">
+<code class="descname">feature_analysis</code><span class="sig-paren">(</span><em>mode</em>, <em>feat_names</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.feature_analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.feature_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use asapys feature analysis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>str</em>) – from [box_violin, correlation, clustering]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Corresponding plot paths</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.feature_importance">
+<code class="descname">feature_importance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.feature_importance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.feature_importance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.get_parX">
+<code class="descname">get_parX</code><span class="sig-paren">(</span><em>config</em>, <em>par=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.get_parX"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.get_parX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate parX-values of default and incumbent configs.
+First determine PAR-timeouts for each run on each instances,
+Second average over train/test if available, else just average.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>config</strong> (<em>Configuration</em>) – config to be calculated</li>
+<li><strong>par</strong> (<em>int</em>) – par-factor to use</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">PAR10 values for train- and test-instances, if available as tuple
+else the general average</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(train, test) OR average – tuple&lt;float, float&gt; OR float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.get_timeouts">
+<code class="descname">get_timeouts</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.get_timeouts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.get_timeouts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of timeouts in config per runs in total (not per
+instance)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> (<em>Configuration</em>) – configuration from which to calculate the timeouts</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>timeouts</strong> – tuple (timeouts, total runs)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.importance_table">
+<code class="descname">importance_table</code><span class="sig-paren">(</span><em>pimp_sort_table_by</em>, <em>threshold=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.importance_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.importance_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a html-table over all evaluated parameter-importance-methods.
+Parameters are sorted after their average importance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.local_epm_plots">
+<code class="descname">local_epm_plots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.local_epm_plots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.local_epm_plots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.parameter_importance">
+<code class="descname">parameter_importance</code><span class="sig-paren">(</span><em>modus</em>, <em>incumbent</em>, <em>output</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.parameter_importance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.parameter_importance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate parameter-importance using the PIMP-package.
+Currently ablation, forward-selection and fanova are used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>modus</strong> (<em>str</em>) – modus for parameter importance, from
+[forward-selection, ablation, fanova, lpi]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>importance</strong> – importance object with evaluated data</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">pimp.Importance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_algorithm_footprint">
+<code class="descname">plot_algorithm_footprint</code><span class="sig-paren">(</span><em>algorithms=None</em>, <em>density=200</em>, <em>purity=0.95</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_algorithm_footprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_algorithm_footprint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_cdf">
+<code class="descname">plot_cdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_cdf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_cdf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_confviz">
+<code class="descname">plot_confviz</code><span class="sig-paren">(</span><em>incumbents</em>, <em>runhistories</em>, <em>max_confs=1000</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_confviz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_confviz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the visualization of configurations, highlightning the
+incumbents. Using original rh, so the explored configspace can be
+estimated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>incumbents</strong> (<em>List</em><em>[</em><em>Configuration</em><em>]</em>) – list with incumbents, so they can be marked in plot</li>
+<li><strong>runhistories</strong> (<em>List</em><em>[</em><em>RunHistory</em><em>]</em>) – list of runhistories, so they can be marked in plot</li>
+<li><strong>max_confs</strong> (<em>int</em>) – maximum number of data-points to plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>confviz</strong> – script to generate the interactive html</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_cost_over_time">
+<code class="descname">plot_cost_over_time</code><span class="sig-paren">(</span><em>runs</em>, <em>validator</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_cost_over_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_cost_over_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_parallel_coordinates">
+<code class="descname">plot_parallel_coordinates</code><span class="sig-paren">(</span><em>n_param=10</em>, <em>n_configs=500</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_parallel_coordinates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_parallel_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a parallel coordinates plot visualizing the explored
+parameter configuration space.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cave.analyzer.Analyzer.plot_scatter">
+<code class="descname">plot_scatter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/cave/analyzer.html#Analyzer.plot_scatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cave.analyzer.Analyzer.plot_scatter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cave.cave_cli.html" class="btn btn-neutral float-right" title="cave.cave_cli module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.html" class="btn btn-neutral" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018, Marius Lindauer, Joshua Marben, Andre Biedenkapp.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

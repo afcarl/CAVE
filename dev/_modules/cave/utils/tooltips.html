@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cave.utils.tooltips &mdash; CAVE 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="CAVE 1.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CAVE
+          
+
+          
+            
+            <img src="../../../_static/cave.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">F.A.Q.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.analyzer.html">cave.analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.cave_cli.html">cave.cave_cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.cavefacade.html">cave.cavefacade module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.plot.html">cave.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.algorithm_footprint.html">cave.plot.algorithm_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.configurator_footprint.html">cave.plot.configurator_footprint module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.parallel_coordinates.html">cave.plot.parallel_coordinates module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.plotter.html">cave.plot.plotter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.plot.scatter.html">cave.plot.scatter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.html.html">cave.html package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.html.html_builder.html">cave.html.html_builder module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.reader.html">cave.reader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.base_reader.html">cave.reader.base_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.configurator_run.html">cave.reader.configurator_run module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.csv2rh.html">cave.reader.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.csv_reader.html">cave.reader.csv_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.smac2_reader.html">cave.reader.smac2_reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.reader.smac3_reader.html">cave.reader.smac3_reader module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../apidoc/cave.utils.html">cave.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.convert_for_epm.html">cave.utils.convert_for_epm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.csv2rh.html">cave.utils.csv2rh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.helpers.html">cave.utils.helpers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.io.html">cave.utils.io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.statistical_tests.html">cave.utils.statistical_tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.timing.html">cave.utils.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../apidoc/cave.utils.tooltips.html">cave.utils.tooltips module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CAVE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>cave.utils.tooltips</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for cave.utils.tooltips</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="get_tooltip"><a class="viewcode-back" href="../../../apidoc/cave.utils.tooltips.html#cave.utils.tooltips.get_tooltip">[docs]</a><span></span><span class="k">def</span> <span class="nf">get_tooltip</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+    <span class="n">tooltips</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Meta Data&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data, i.e. number of instances and &quot;</span>
+                     <span class="s2">&quot;parameters as well as configuration budget. &quot;</span>
+                     <span class="s2">&quot;Statistics apply to the best run, if multiple &quot;</span>
+                     <span class="s2">&quot;configurator runs are compared. The p-value of &quot;</span>
+                     <span class="s2">&quot;the paired permutation test uses 10000 permutations &quot;</span>
+                     <span class="s2">&quot;and tests against the null-hypothesis that the mean &quot;</span>
+                     <span class="s2">&quot;of performance between default and incumbent is equal.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Best configuration&quot;</span><span class="p">:</span> <span class="s2">&quot;Comparing parameters of default and incumbent. &quot;</span>
+                              <span class="s2">&quot;Parameters that differ from default to &quot;</span>
+                              <span class="s2">&quot;incumbent are presented first.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Performance Analysis&quot;</span><span class="p">:</span> <span class="s2">&quot;Contains different ways of analyzing &quot;</span>
+                                <span class="s2">&quot;the final incumbent and the performance of &quot;</span>
+                                <span class="s2">&quot;the algorithm&#39;s default parameter &quot;</span>
+                                <span class="s2">&quot;configuration.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Performance Table&quot;</span><span class="p">:</span> <span class="s2">&quot;The most common way to compare &quot;</span>
+                             <span class="s2">&quot;performances of algorithms on the same set &quot;</span>
+                             <span class="s2">&quot;of instances. Entries in the table &quot;</span>
+                             <span class="s2">&quot;depend on the cost metric of the &quot;</span>
+                             <span class="s2">&quot;configurator run. For scenarios optimizing &quot;</span>
+                             <span class="s2">&quot;running time, this includes average runtime, &quot;</span>
+                             <span class="s2">&quot;penalized average runtime as well as number of &quot;</span>
+                             <span class="s2">&quot;timeouts.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Scatterplot&quot;</span><span class="p">:</span> <span class="s2">&quot;Scatter plots show the costs of the default and &quot;</span>
+                       <span class="s2">&quot;optimized parameter &quot;</span>
+                       <span class="s2">&quot;configuration on each instance. Since this &quot;</span>
+                       <span class="s2">&quot;looses detailed information about the individual &quot;</span>
+                       <span class="s2">&quot;cost on each instance by looking at aggregated cost &quot;</span>
+                       <span class="s2">&quot;values in tables, scatter plots provide a more &quot;</span>
+                       <span class="s2">&quot;detailed picture. They provide insights whether &quot;</span>
+                       <span class="s2">&quot;overall performance improvements can be explained &quot;</span>
+                       <span class="s2">&quot;only by some outliers or whether they are due to &quot;</span>
+                       <span class="s2">&quot;improvements on the entire instance set. On the &quot;</span>
+                       <span class="s2">&quot;left side the training-data is scattered, on the &quot;</span>
+                       <span class="s2">&quot;right side the test-data is scattered.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;empirical Cumulative Distribution Function (eCDF)&quot;</span><span class="p">:</span>
+            <span class="s2">&quot;Depicts cost distributions over the set of instances. &quot;</span>
+            <span class="s2">&quot;Since these are empirical distributions, &quot;</span>
+            <span class="s2">&quot;the plots show step functions. These plots provide insights into &quot;</span>
+            <span class="s2">&quot;how well configurations perform up to a certain threshold. For &quot;</span>
+            <span class="s2">&quot;runtime scenarios this shows the probability of solving all &quot;</span>
+            <span class="s2">&quot;instances from the set in a given timeframe. On the &quot;</span>
+            <span class="s2">&quot;left side the training-data is scattered, on the &quot;</span>
+            <span class="s2">&quot;right side the test-data is scattered.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Algorithm Footprints&quot;</span><span class="p">:</span> <span class="s2">&quot;The instance features are projected into a &quot;</span>
+                                <span class="s2">&quot;two/three dimensional space using principal &quot;</span>
+                                <span class="s2">&quot;component analysis (PCA) and the footprint &quot;</span>
+                                <span class="s2">&quot;of each algorithm is plotted, i.e., on which &quot;</span>
+                                <span class="s2">&quot;instances the default or the optimized &quot;</span>
+                                <span class="s2">&quot;configuration performs well. In contrast &quot;</span>
+                                <span class="s2">&quot;to the other analysis methods in this &quot;</span>
+                                <span class="s2">&quot;section, these plots allow insights into &quot;</span>
+                                <span class="s2">&quot;which of the two configurations performs &quot;</span>
+                                <span class="s2">&quot;well on specific types or clusters of &quot;</span>
+                                <span class="s2">&quot;instances. Inspired by Smith-Miles.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Default vs Incumbent 2d&quot;</span> <span class="p">:</span> <span class="s2">&quot;Comparing footprints of default (left) and &quot;</span>
+                                    <span class="s2">&quot;incumbent (right) in two-dimensional &quot;</span>
+                                    <span class="s2">&quot;feature space.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Default 3d&quot;</span> <span class="p">:</span> <span class="s2">&quot;Projection of feature space into three dimensions, &quot;</span>
+                       <span class="s2">&quot;different viewpoints for enhanced explanation.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Incumbent 3d&quot;</span> <span class="p">:</span> <span class="s2">&quot;Projection of feature space into three dimensions, &quot;</span>
+                         <span class="s2">&quot;different viewpoints for enhanced explanation.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Configurator&#39;s behavior&quot;</span><span class="p">:</span> <span class="s2">&quot;Analysis of the trajectory and the &quot;</span>
+                                   <span class="s2">&quot;runhistory returned by a configurator &quot;</span>
+                                   <span class="s2">&quot;to gain insights into how the configurator &quot;</span>
+                                   <span class="s2">&quot;tried to find a well-performing &quot;</span>
+                                   <span class="s2">&quot;configuration.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Configurator Footprint&quot;</span><span class="p">:</span> <span class="s2">&quot;Analysis of the iteratively sampled &quot;</span>
+                                  <span class="s2">&quot;configurations during the optimization &quot;</span>
+                                  <span class="s2">&quot;procedure. &quot;</span>
+                                  <span class="s2">&quot;Multi-dimensional scaling (MDS) is used &quot;</span>
+                                  <span class="s2">&quot;to reduce dimensionality of the &quot;</span>
+                                  <span class="s2">&quot;search space and plot the distribution of &quot;</span>
+                                  <span class="s2">&quot;evaluated configurations. The larger the &quot;</span>
+                                  <span class="s2">&quot;dot, the more often the configuration was &quot;</span>
+                                  <span class="s2">&quot;evaluated on instances from the set. &quot;</span>
+                                  <span class="s2">&quot;Configurations that were incumbents at least &quot;</span>
+                                  <span class="s2">&quot;once during optimization are marked as red &quot;</span>
+                                  <span class="s2">&quot;squares. &quot;</span>
+                                  <span class="s2">&quot;Configurations acquired through local search &quot;</span>
+                                  <span class="s2">&quot;are marked with a &#39;x&#39;. &quot;</span>
+                                  <span class="s2">&quot;The downward triangle denotes the final &quot;</span>
+                                  <span class="s2">&quot;incumbent, whereas the orange upward triangle &quot;</span>
+                                  <span class="s2">&quot;denotes the default configuration. &quot;</span>
+                                  <span class="s2">&quot;The heatmap and the colorbar correspond to the predicted &quot;</span>
+                                  <span class="s2">&quot;performance in that part of the search &quot;</span>
+                                  <span class="s2">&quot;space.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Cost over time&quot;</span><span class="p">:</span> <span class="s2">&quot;Depicts the average cost of the best so far &quot;</span>
+                          <span class="s2">&quot;found configuration (using all trajectory data) &quot;</span>
+                          <span class="s2">&quot;over the time spent by the configurator &quot;</span>
+                          <span class="s2">&quot;(including target algorithm runs and the overhead &quot;</span>
+                          <span class="s2">&quot;generated by the configurator)&quot;</span>
+                          <span class="s2">&quot;If the curve flattens out early, it indicates that &quot;</span>
+                          <span class="s2">&quot;too much time was spent for the configurator run; &quot;</span>
+                          <span class="s2">&quot;whereas a curve that is still improving at the &quot;</span>
+                          <span class="s2">&quot;end of the budget indicates that one should &quot;</span>
+                          <span class="s2">&quot;increase the configuration budget. The plotted standard &quot;</span>
+                          <span class="s2">&quot;deviation gives the uncertainty over multiple configurator &quot;</span>
+                          <span class="s2">&quot;runs.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Parallel Coordinates&quot;</span><span class="p">:</span> <span class="s2">&quot;Previously used by Golovin et al. &quot;</span>
+                                <span class="s2">&quot;to study the frequency of chosen parameter &quot;</span>
+                                <span class="s2">&quot;settings in black-box-optimization. &quot;</span>
+                                <span class="s2">&quot;Each line corresponds to one configuration in &quot;</span>
+                                <span class="s2">&quot;the runhistory and shows the &quot;</span>
+                                <span class="s2">&quot;parameter settings and the corresponding &quot;</span>
+                                <span class="s2">&quot;(estimated) average cost. To &quot;</span>
+                                <span class="s2">&quot;handle large configuration spaces with &quot;</span>
+                                <span class="s2">&quot;hundreds of parameters, &quot;</span>
+                                <span class="s2">&quot;the (at most) 10 most important parameters &quot;</span>
+                                <span class="s2">&quot;based on a fANOVA parameter &quot;</span>
+                                <span class="s2">&quot;importance analysis are plotted. &quot;</span>
+                                <span class="s2">&quot;To emphasize better &quot;</span>
+                                <span class="s2">&quot;configurations, the performance is encoded &quot;</span>
+                                <span class="s2">&quot;in the color of each line, &quot;</span>
+                                <span class="s2">&quot;ranging from blue to red. These plots provide &quot;</span>
+                                <span class="s2">&quot;insights into whether the configurator &quot;</span>
+                                <span class="s2">&quot;focused on specific parameter values and &quot;</span>
+                                <span class="s2">&quot;how these correlate to their costs.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Parameter Importance&quot;</span><span class="p">:</span> <span class="s2">&quot;Parameter Importance analysis to determine &quot;</span>
+                                <span class="s2">&quot;which of the parameters most influence the &quot;</span>
+                                <span class="s2">&quot;analysed algorithms performance.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;fANOVA&quot;</span><span class="p">:</span> <span class="s2">&quot;fANOVA (functional analysis of variance) &quot;</span>
+                  <span class="s2">&quot;computes the &quot;</span>
+                  <span class="s2">&quot;fraction of the variance in the cost space explained by &quot;</span>
+                  <span class="s2">&quot;changing a parameter by marginalizing over &quot;</span>
+                  <span class="s2">&quot;all other parameters, for each parameter (or for pairs &quot;</span>
+                  <span class="s2">&quot;of parameters). Parameters with high importance scores &quot;</span>
+                  <span class="s2">&quot;will have a large impact on the performance. &quot;</span>
+                  <span class="s2">&quot;To this end, a random forest is trained as &quot;</span>
+                  <span class="s2">&quot;an empirical performance model on the &quot;</span>
+                  <span class="s2">&quot;available empirical data from the available runhistories.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Forward Selection&quot;</span><span class="p">:</span> <span class="s2">&quot;Forward Selection is a generic method to &quot;</span>
+                             <span class="s2">&quot;obtain a subset of parameters to achieve the &quot;</span>
+                             <span class="s2">&quot;same prediction error as with the &quot;</span>
+                             <span class="s2">&quot;full parameter set. &quot;</span>
+                             <span class="s2">&quot;Each parameter is scored by how much the &quot;</span>
+                             <span class="s2">&quot;out-of-bag-error of an empirical &quot;</span>
+                             <span class="s2">&quot;performance model based on a random &quot;</span>
+                             <span class="s2">&quot;forest is decreased.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Ablation&quot;</span><span class="p">:</span> <span class="s2">&quot;Ablation Analysis is a method to determine parameter&quot;</span>
+                    <span class="s2">&quot;importance by comparing two parameter configurations, &quot;</span>
+                    <span class="s2">&quot;typically the default and the optimized configuration.&quot;</span>
+                    <span class="s2">&quot;It uses a greedy forward search to determine the order &quot;</span>
+                    <span class="s2">&quot;of flipping the parameter settings from default &quot;</span>
+                    <span class="s2">&quot;configuration to incumbent such that in each step &quot;</span>
+                    <span class="s2">&quot;the cost is maximally decreased.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Local Parameter Importance (LPI)&quot;</span><span class="p">:</span>
+            <span class="s2">&quot;Using an empirical performance model, performance changes of a &quot;</span>
+            <span class="s2">&quot;configuration along each parameter are calculated. To quantify &quot;</span>
+            <span class="s2">&quot;the importance of a parameter value, the variance of &quot;</span>
+            <span class="s2">&quot;all cost values by changing that parameter are predicted and then &quot;</span>
+            <span class="s2">&quot;the fraction of all variances is computed. This analysis is &quot;</span>
+            <span class="s2">&quot;inspired by the human behaviour to look for improvements in the &quot;</span>
+            <span class="s2">&quot;neighborhood of individual parameters of a configuration.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Feature Analysis&quot;</span><span class="p">:</span> <span class="s2">&quot;Analysis of the instance features to gain &quot;</span>
+                            <span class="s2">&quot;insights into the instance set that &quot;</span>
+                            <span class="s2">&quot;was used during the optimization.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Violin and Box Plots&quot;</span><span class="p">:</span> <span class="s2">&quot;Box and Violin Plots show the distribution &quot;</span>
+                                <span class="s2">&quot;of each feature value across the instances. &quot;</span>
+                                <span class="s2">&quot;Box plots show the quantiles of &quot;</span>
+                                <span class="s2">&quot;the distribution and violin plots show the &quot;</span>
+                                <span class="s2">&quot;approximated probability density of the &quot;</span>
+                                <span class="s2">&quot;feature values. Such plots are useful to &quot;</span>
+                                <span class="s2">&quot;inspect the instances and to detect &quot;</span>
+                                <span class="s2">&quot;characteristics of the instances. For &quot;</span>
+                                <span class="s2">&quot;example, if the distributions have two or &quot;</span>
+                                <span class="s2">&quot;more modes, it could indicate that the &quot;</span>
+                                <span class="s2">&quot;instance set is heterogeneous which could &quot;</span>
+                                <span class="s2">&quot;cause problems in combination &quot;</span>
+                                <span class="s2">&quot;with racing strategies configurators &quot;</span>
+                                <span class="s2">&quot;typically use. NaN values &quot;</span>
+                                <span class="s2">&quot;are removed from the data.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Feature Importance&quot;</span><span class="p">:</span> <span class="s2">&quot;Reduction of the out-of-the-bag root &quot;</span>
+                              <span class="s2">&quot;mean squared error of the random &quot;</span>
+                              <span class="s2">&quot;forest empirical performance model &quot;</span>
+                              <span class="s2">&quot;by applying forward selection on the set of &quot;</span>
+                              <span class="s2">&quot;instance features. Using this method, we can &quot;</span>
+                              <span class="s2">&quot;identify a set of instance features that &quot;</span>
+                              <span class="s2">&quot;suffices to obtain prediction accuracy &quot;</span>
+                              <span class="s2">&quot;comparable to using the full set of &quot;</span>
+                              <span class="s2">&quot;features.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Correlation&quot;</span><span class="p">:</span> <span class="s2">&quot;Correlation of features based on the Pearson &quot;</span>
+                       <span class="s2">&quot;product-moment correlation. Since instance &quot;</span>
+                       <span class="s2">&quot;features are used to train an empirical &quot;</span>
+                       <span class="s2">&quot;performance model in model-based &quot;</span>
+                       <span class="s2">&quot;configurators, it can &quot;</span>
+                       <span class="s2">&quot;be important to remove correlated features in a &quot;</span>
+                       <span class="s2">&quot;pre-processing step &quot;</span>
+                       <span class="s2">&quot;depending on the machine-learning algorithm. &quot;</span>
+                       <span class="s2">&quot;Darker fields &quot;</span>
+                       <span class="s2">&quot;corresponds to a larger correlation &quot;</span>
+                       <span class="s2">&quot;between the features.&quot;</span><span class="p">,</span>
+
+        <span class="s2">&quot;Clustering&quot;</span><span class="p">:</span> <span class="s2">&quot;Clustering instances in 2d; the color encodes the &quot;</span>
+                      <span class="s2">&quot;cluster assigned to each cluster. Similar to ISAC, we &quot;</span>
+                      <span class="s2">&quot;use a k-means to cluster the instances in the feature &quot;</span>
+                      <span class="s2">&quot;space. As pre-processing, we use standard scaling and &quot;</span>
+                      <span class="s2">&quot;a PCA to 2 dimensions. To guess the number of &quot;</span>
+                      <span class="s2">&quot;clusters, we use the silhouette score on the &quot;</span>
+                      <span class="s2">&quot;range of 2 to 12 in the number of clusters&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">tooltips</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">tooltips</span><span class="p">[</span><span class="n">header</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018, Marius Lindauer, Joshua Marben, Andre Biedenkapp.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

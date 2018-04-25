@@ -1,0 +1,8 @@
+cave.plot.plotter module
+========================
+
+.. automodule:: cave.plot.plotter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    :inherited-members:
